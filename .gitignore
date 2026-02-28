@@ -7,6 +7,7 @@ __pycache__/
 
 # data outputs
 to_csvs/
+to_games_csvs/
 data/
 *.csv
 *.parquet
