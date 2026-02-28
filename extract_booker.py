@@ -2,7 +2,9 @@ from nba_api.stats.endpoints import playergamelog
 import pandas as pd
 import time
 
-BOOKER_ID = "1626164"
+# PLAYER ID
+PLAYER_ID = ""
+# BOOKER_ID = "1626164"
 
 # Seasons Booker has played (string format required by API)
 seasons = {
@@ -25,7 +27,7 @@ for season_label, season in seasons.items():
     print(f"Pulling {season}...")
     
     gamelog = playergamelog.PlayerGameLog(
-        player_id=BOOKER_ID,
+        player_id=PLAYER_ID,
         season=season
     )
     
