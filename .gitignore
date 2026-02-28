@@ -7,10 +7,15 @@ __pycache__/
 
 # data outputs
 to_csvs/
-to_games_csvs/
 data/
-*.csv
 *.parquet
+
+# ignore all csvs by default
+*.csv
+
+# BUT track team game csvs
+!to_games_csvs/
+!to_games_csvs/*.csv
 
 # environment files
 .env
