@@ -1,19 +1,17 @@
- SELECT b.season,
-    b.gp,
-    b.ppg,
-    e.cohort_ppg_avg,
-    b.ppg - e.cohort_ppg_avg AS ppg_minus_cohort,
-        CASE
-            WHEN e.cohort_ppg_avg = 0::numeric THEN NULL::numeric
-            ELSE b.ppg / e.cohort_ppg_avg
-        END AS ppg_relative_index,
-    b.apg,
-    e.cohort_apg_avg,
-    b.apg - e.cohort_apg_avg AS apg_minus_cohort,
-    b.rpg,
-    e.cohort_rpg_avg,
-    b.rpg - e.cohort_rpg_avg AS rpg_minus_cohort,
-    b.pts_std
-   FROM mart_player_season b
-     JOIN mart_allstar_environment e ON e.season = b.season
-  WHERE b.player_name = 'Devin Booker'::text;
+SELECT
+  season,
+  gp,
+  ppg,
+  apg,
+  rpg,
+  mpg,
+  pts_std,
+  cohort_ppg_avg,
+  ppg_minus_cohort,
+  ppg_relative_index,
+  cohort_apg_avg,
+  apg_minus_cohort,
+  cohort_rpg_avg,
+  rpg_minus_cohort
+FROM mart_player_vs_cohort
+WHERE player_name = 'Devin Booker';
