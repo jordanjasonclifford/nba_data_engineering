@@ -24,4 +24,5 @@ SELECT
   opp_ftm,
   opp_fta
 FROM mart_player_head_to_head_games
-WHERE player = 'Devin Booker';
+WHERE player = 'Devin Booker'
+ORDER BY season, game_date;

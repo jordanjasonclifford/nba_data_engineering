@@ -17,4 +17,5 @@ SELECT
   opp_fg3_pct,
   opp_ft_pct
 FROM mart_player_head_to_head_summary
-WHERE player = 'Devin Booker';
+WHERE player = 'Devin Booker'
+ORDER BY opponent, context;

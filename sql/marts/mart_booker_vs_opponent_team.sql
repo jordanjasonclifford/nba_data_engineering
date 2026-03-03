@@ -1,14 +1,4 @@
-SELECT
-  season,
-  opponent_team_abbr,
-  games,
-  wins,
-  losses,
-  ppg,
-  apg,
-  rpg,
-  fg_pct,
-  fg3_pct,
-  ft_pct
+SELECT *
 FROM mart_player_vs_opponent_team
-WHERE player_name = 'Devin Booker';
+WHERE player_name = 'Devin Booker'
+ORDER BY season, opponent_team_abbr;
