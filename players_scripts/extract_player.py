@@ -7,13 +7,15 @@ from nba_api.stats.endpoints import playergamelog
 from nba_api.stats.static import players
 
 # ---------- config ----------
-PLAYER_ID = "1629627"  #  
+# Get the player's ID from 'find_player.py' output
+PLAYER_ID = "1629627"  #  For example, Zion Williamson's ID is 1629627. Change this to the desired player's ID.
 START_SEASON = "2015-16"
 END_SEASON = "2025-26"
 
 OUT_DIR = "to_csvs"
 OUT_FILE = f"player_{PLAYER_ID}_gamelogs_2015_2026.csv"
 
+# Rate limiting config (to avoid hitting API limits and getting IP banned)
 BASE_SLEEP = 1.0       # safer than 0.6
 JITTER = 0.6           # random extra delay
 COOLDOWN_EVERY = 120
@@ -44,9 +46,9 @@ def fetch_with_retries(player_id: str, season: str, max_tries: int = MAX_TRIES) 
             return df
         except Exception as e:
             if attempt == max_tries:
-                print(f"  ❌ Failed {player_id} {season} after {max_tries} tries: {e}")
+                print(f"  Failed {player_id} {season} after {max_tries} tries: {e}")
                 return pd.DataFrame()
-            print(f"  ⚠️ Error {player_id} {season} (attempt {attempt}/{max_tries}): {e}")
+            print(f"  Error {player_id} {season} (attempt {attempt}/{max_tries}): {e}")
             time.sleep(delay)
             delay *= 3  # 2s -> 6s -> 18s
 
@@ -73,7 +75,7 @@ def main():
         if df is None or df.empty:
             print("  (no games found)")
         else:
-            # Match Booker-style output: keep all endpoint columns + add SEASON column
+            # *** Keep all endpoint columns + add SEASON column
             df["SEASON"] = season
             # Add easy tracking columns
             df["PLAYER_ID"] = str(PLAYER_ID)
@@ -106,7 +108,7 @@ def main():
     out_path = os.path.join(OUT_DIR, OUT_FILE)
     combined_df.to_csv(out_path, index=False)
 
-    print(f"\nDone ✅ Saved: {out_path}")
+    print(f"\nDone and saved: {out_path}")
     print(f"Total rows: {len(combined_df)}")
 
 if __name__ == "__main__":

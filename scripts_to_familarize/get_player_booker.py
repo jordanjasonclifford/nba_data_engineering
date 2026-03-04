@@ -1,3 +1,7 @@
+# This script is for testing and familiarization with the nba_api library, specifically for getting Devin Booker's game logs.
+# It is not meant to be a reusable script, but rather a sandbox for learning how to
+# use the API to get the data we need for our analysis.
+
 from nba_api.stats.endpoints import playergamelog
 
 gamelog = playergamelog.PlayerGameLog(
