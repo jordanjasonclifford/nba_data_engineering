@@ -37,8 +37,8 @@ The analysis focuses on:
 ```
 nba_api/
 │
-├── games/                      # game data extraction
-├── players_scripts/            # player data extraction
+├── to_csvs/                      # player data extraction
+├── to_games_csvs/            # game data extraction
 │
 ├── warehouse/
 │   ├── fact_player_game.csv
@@ -56,6 +56,7 @@ nba_api/
 │       └── mart_booker_vs_opponent_team.sql
 │
 ├── powerbi/
+|   ├── devin_booker_analytics_comparisons.pdf
 │   └── devin_booker_analytics_comparisons.pbix
 │
 ├── requirements.txt
