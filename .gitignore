@@ -6,7 +6,7 @@ __pycache__/
 *.pyc
 
 # data outputs
-to_csvs/
+to_players_csvs/
 data/
 *.parquet
 
