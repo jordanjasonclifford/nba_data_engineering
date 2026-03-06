@@ -37,8 +37,8 @@ The analysis focuses on:
 ```
 nba_api/
 │
-├── to_csvs/                      # player data extraction
-├── to_games_csvs/            # game data extraction
+├── to_players_csvs/          # 62 csv files of player data from 2015-2026
+├── to_games_csvs/            # 30 csv files of all team data from 2015-2026
 │
 ├── warehouse/
 │   ├── fact_player_game.csv
