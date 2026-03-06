@@ -13,9 +13,11 @@ data/
 # ignore all csvs by default
 *.csv
 
-# BUT track team game csvs
+# BUT track team game csvs AND warehouse game csvs
 !to_games_csvs/
 !to_games_csvs/*.csv
+!warehouse/
+!warehouse/*.csv
 
 # environment files
 .env
