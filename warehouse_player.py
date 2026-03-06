@@ -1,7 +1,7 @@
 import glob
 import pandas as pd
 
-files = glob.glob("to_csvs/*.csv")
+files = glob.glob("to_players_csvs/*.csv")
 
 warehouse_df = pd.concat(
     [pd.read_csv(f) for f in files],

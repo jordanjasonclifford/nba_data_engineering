@@ -12,7 +12,7 @@ PLAYER_ID = "1629627"  #  For example, Zion Williamson's ID is 1629627. Change t
 START_SEASON = "2015-16"
 END_SEASON = "2025-26"
 
-OUT_DIR = "to_csvs"
+OUT_DIR = "to_players_csvs"
 OUT_FILE = f"player_{PLAYER_ID}_gamelogs_2015_2026.csv"
 
 # Rate limiting config (to avoid hitting API limits and getting IP banned)
