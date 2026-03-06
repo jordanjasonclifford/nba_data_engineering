@@ -109,13 +109,23 @@ Open the file using **Microsoft Power BI Desktop** and connect to the `nba_wareh
 
 The dashboard contains six analytical sections:
 
-1. Introduction
-2. Booker vs All-Star Cohort
-3. Head-to-Head Matchups
-4. Team Impact
-5. Context Splits
-6. Booker vs NBA Teams
+## 1. Introduction
+![Introduction](images/booker_page1.png)
 
+## 2. Booker vs All-Star Cohort
+![Booker vs Cohort](images/booker_page2.png)
+
+## 3. Head-to-Head Matchups
+![Head to Head](images/booker_page3.png)
+
+## 4. Team Impact
+![Team Impact](images/booker_page4.png)
+
+## 5. Context Splits
+![Context Splits](images/booker_page5.png)
+
+## 6. Booker vs NBA Teams
+![Booker vs Teams](images/booker_page6.png)
 ---
 
 ## Technologies Used
