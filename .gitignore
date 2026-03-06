@@ -10,10 +10,11 @@ to_players_csvs/
 data/
 *.parquet
 
-# ignore all csvs by default
-*.csv
+ 
 
 # BUT track team game csvs AND warehouse game csvs
+!to_players_csvs/
+!to_players_csvs/*.csv
 !to_games_csvs/
 !to_games_csvs/*.csv
 !warehouse/
